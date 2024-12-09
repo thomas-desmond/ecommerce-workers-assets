@@ -8,9 +8,13 @@ export default async function Page({
 }: {
   params: Promise<{ productId: number }>;
 }) {
-    await new Promise((resolve) => setTimeout(resolve, 1500)); // 3-second delay
+
+  console.log("Made it to here")
 
   const productId = (await params).productId;
+
+  console.log(productId)
+
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
